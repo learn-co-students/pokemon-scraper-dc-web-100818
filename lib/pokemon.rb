@@ -11,6 +11,7 @@ class Pokemon
     @@all << self
   end
 
+  # saves an instance of a pokemon with the correct id
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
